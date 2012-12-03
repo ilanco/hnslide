@@ -1,0 +1,8 @@
+body { font-family: sans-serif; background: #ffffff; }
+
+#slides .slides-container li .container {
+    background: #f6f6ef;
+}
+.slides-navigation a {
+    background: #ff6600;
+}

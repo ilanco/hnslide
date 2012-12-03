@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block style_block %}
+    <style type="text/css">
+        table.table { width: 60%; }
+    </style>
+{% endblock %}
+
+{% block content %}
+<div id="slides">
+    <ul class="slides-container entries">
+        {% for entry in hnList %}
+        <li class="entry">
+            <div class="container">
+                <h2><a href="{{ entry.link }}">{{ entry.title }}</a></h2>
+                {% if entry.score %}
+                <h4>{{ entry.score }} by {{ entry.user }} | <a href="{{ entry.itemId }}">{{ entry.comments }}</a></h4>
+                {% endif %}
+            </div>
+        </li>
+        {% endfor %}
+    </ul>
+
+    <nav class="slides-navigation">
+      <a href="#" class="next">Next</a>
+      <a href="#" class="prev">Previous</a>
+    </nav>
+</div>
+{% endblock content %}
+
+{% block tail_script %}
+{% endblock %}
